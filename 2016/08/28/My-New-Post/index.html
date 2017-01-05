@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="生活一直在继续，我们只有不断在进步，才能不被社会淘汰，加油！！！">
+<meta name="description" content="ok，我从爬虫开始接触python, 爬虫在我看来是一个神奇得东西，它能快速得各种网站上提起你所需要，或者说你想要得东西，图片，链接，文字，===我有它做得第一件事情，就是去豆瓣网站上获取电影得名字，虽然它很简单，但是完事开头能难，我会一步步得走下去；相信我！！！ I Can代码如下：待完善！！！
+#!/usr/bin/env python
+encoding=utf-8“””爬取豆瓣电影TOP25">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
+<meta property="og:title" content="爬虫">
 <meta property="og:url" content="http://yoursite.com/2016/08/28/My-New-Post/index.html">
 <meta property="og:site_name" content="Yuan_ShiMing">
-<meta property="og:description" content="生活一直在继续，我们只有不断在进步，才能不被社会淘汰，加油！！！">
-<meta property="og:updated_time" content="2016-09-25T03:24:46.862Z">
+<meta property="og:description" content="ok，我从爬虫开始接触python, 爬虫在我看来是一个神奇得东西，它能快速得各种网站上提起你所需要，或者说你想要得东西，图片，链接，文字，===我有它做得第一件事情，就是去豆瓣网站上获取电影得名字，虽然它很简单，但是完事开头能难，我会一步步得走下去；相信我！！！ I Can代码如下：待完善！！！
+#!/usr/bin/env python
+encoding=utf-8“””爬取豆瓣电影TOP25">
+<meta property="og:updated_time" content="2017-01-05T15:06:14.508Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
-<meta name="twitter:description" content="生活一直在继续，我们只有不断在进步，才能不被社会淘汰，加油！！！">
+<meta name="twitter:title" content="爬虫">
+<meta name="twitter:description" content="ok，我从爬虫开始接触python, 爬虫在我看来是一个神奇得东西，它能快速得各种网站上提起你所需要，或者说你想要得东西，图片，链接，文字，===我有它做得第一件事情，就是去豆瓣网站上获取电影得名字，虽然它很简单，但是完事开头能难，我会一步步得走下去；相信我！！！ I Can代码如下：待完善！！！
+#!/usr/bin/env python
+encoding=utf-8“””爬取豆瓣电影TOP25">
 
 
 
@@ -116,7 +122,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/08/28/My-New-Post/"/>
 
-  <title> My New Post | Yuan_ShiMing </title>
+  <title> 爬虫 | Yuan_ShiMing </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +262,7 @@
             
             
               
-                My New Post
+                爬虫
               
             
           </h1>
@@ -282,8 +288,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -300,7 +306,7 @@
 
           
           
-             <span id="/2016/08/28/My-New-Post/" class="leancloud_visitors" data-flag-title="My New Post">
+             <span id="/2016/08/28/My-New-Post/" class="leancloud_visitors" data-flag-title="爬虫">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -322,7 +328,24 @@
       
 
       
-        <p>生活一直在继续，我们只有不断在进步，才能不被社会淘汰，加油！！！</p>
+        <p>ok，我从爬虫开始接触python, 爬虫在我看来是一个神奇得东西，<br>它能快速得各种网站上提起你所需要，或者说你想要得东西，<br>图片，链接，文字，===<br>我有它做得第一件事情，就是去豆瓣网站上获取电影得名字，<br>虽然它很简单，但是完事开头能难，我会一步步得走下去；相信我！！！ I Can<br>代码如下：待完善！！！</p>
+<p>#!/usr/bin/env python</p>
+<h1 id="encoding-utf-8"><a href="#encoding-utf-8" class="headerlink" title="encoding=utf-8"></a>encoding=utf-8</h1><p>“””<br>爬取豆瓣电影TOP250 - 完整示例代码<br>“””<br>import time<br>import requests<br>from bs4 import BeautifulSoup</p>
+<p>url = ‘<a href="https://movie.douban.com/top250" target="_blank" rel="external">https://movie.douban.com/top250</a>‘ #获取豆瓣的链接<br>urls = [‘<a href="https://movie.douban.com/top250?start={}&amp;filter=&#39;.format(str(i))for" target="_blank" rel="external">https://movie.douban.com/top250?start={}&amp;filter=&#39;.format(str(i))for</a> i in range(25,275,25)]<br>print(“正在启动爬虫，请稍等….”)</p>
+<p>def get_page(url,date=None):<br>    we_date = requests.get(url)               # 得到URL的对象<br>    time.sleep(4)<br>    stop    = BeautifulSoup(we_date.text,’lxml’) #用方法解释网页</p>
+<pre><code>#获取网页的信息
+titlt   = stop.select(&apos;#content &gt; div &gt; div.article &gt; ol &gt; li &gt; div &gt; div.info &gt; div.hd &gt; a&apos;)
+grade   = stop.select(&apos;#content &gt; div &gt; div &gt; ol &gt; li &gt; div &gt; div &gt; div.bd &gt; div &gt; span.rating_num&apos;)
+tap     = stop.select(&apos;#content &gt; div &gt; div.article &gt; ol &gt; li &gt; div &gt; div.info &gt; div.bd &gt; div &gt; span&apos;)
+    #把网页中的信息进行进一步的解析
+for titlts,grades,taps in zip(titlt,grade,tap):
+    date = {
+        &apos;titlt&apos; :titlts.get_text(),
+        &apos;grade&apos; :grades.get_text(),
+        &apos;tap&apos; :taps.get_text(),
+        }
+    print(date)
+</code></pre><p>for we_url in urls:<br>    get_page(we_url)</p>
 
       
     </div>
@@ -367,6 +390,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/05/just do it/" rel="prev" title="just do it...">
+                just do it... <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -430,7 +457,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -438,7 +465,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -476,7 +503,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#encoding-utf-8"><span class="nav-number">1.</span> <span class="nav-text">encoding=utf-8</span></a></li></ol></div>
             
           </div>
         </section>
@@ -495,7 +522,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
